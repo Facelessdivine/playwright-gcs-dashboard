@@ -1,6 +1,6 @@
 import type { RunsIndex, Summary } from "./types";
 
-const BASE = import.meta.env.VITE_GCS_BASE as string;
+const BASE = "https://storage.googleapis.com/pw-artifacts-demo-1763046256";
 
 export async function fetchRunsIndex(): Promise<RunsIndex> {
   const r = await fetch(`${BASE}/index/runs.json, { cache: "no-store" }`);
